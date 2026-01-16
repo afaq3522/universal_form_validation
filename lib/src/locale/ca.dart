@@ -1,5 +1,6 @@
 import 'country_rules.dart';
 
+/// Validation rules specifically for Canada.
 class CanadaRules implements CountryRules {
   static final _postalRegex = RegExp(
     r'^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ ]?\d[ABCEGHJ-NPRSTV-Z]\d$',
@@ -7,9 +8,19 @@ class CanadaRules implements CountryRules {
   );
 
   static const _provinces = {
-    'AB', 'BC', 'MB', 'NB', 'NL', 'NS',
-    'NT', 'NU', 'ON', 'PE', 'QC',
-    'SK', 'YT',
+    'AB',
+    'BC',
+    'MB',
+    'NB',
+    'NL',
+    'NS',
+    'NT',
+    'NU',
+    'ON',
+    'PE',
+    'QC',
+    'SK',
+    'YT',
   };
 
   @override

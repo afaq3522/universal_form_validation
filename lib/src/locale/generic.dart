@@ -1,5 +1,6 @@
 import 'country_rules.dart';
 
+/// Generic validation rules that can be used for any country.
 class GenericCountryRules implements CountryRules {
   @override
   String? postalCode(String? value) {

@@ -1,2 +1,3 @@
-## 0.0.2
-- Fix homepage and repository URLs
+## 0.0.3
+- Complete documentation for public members
+- MIT Licence

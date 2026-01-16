@@ -1,8 +1,10 @@
+/// A class that provides common number-related validation methods.
 class NumberValidators {
-  static String? number(
-      String? value, {
-        String fieldName = 'Number',
-      }) {
+  /// Validates that the given [value] is a valid number.
+  ///
+  /// If the [value] is null, empty, or not a valid number, it returns an error message.
+  /// [fieldName] is used in the error message, defaulting to 'Number'.
+  static String? number(String? value, {String fieldName = 'Number'}) {
     if (value == null || value.trim().isEmpty) {
       return '$fieldName is required';
     }
@@ -14,11 +16,11 @@ class NumberValidators {
     return null;
   }
 
-  static String? phone(
-      String? value, {
-        int minLength = 7,
-        int maxLength = 15,
-      }) {
+  /// Validates that the given [value] is a valid phone number.
+  ///
+  /// A valid phone number can optionally start with '+' and must contain only digits.
+  /// It also checks if the length is between [minLength] and [maxLength].
+  static String? phone(String? value, {int minLength = 7, int maxLength = 15}) {
     if (value == null || value.trim().isEmpty) {
       return 'Phone number is required';
     }
