@@ -1,8 +1,2 @@
-# Changelog
-
-## 0.0.1
-- Initial release
-- Generic form validators
-- Country-specific validation (Canada, USA)
-- Extensible country rules
-- Unit tests included
+## 0.0.2
+- Fix homepage and repository URLs
