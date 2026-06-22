@@ -1,10 +1,10 @@
 name: universal_form_validation
 description: A lightweight, extensible, country-aware form validation package for Flutter & Dart.
-version: 0.0.3
-homepage: https://github.com/afaq3522/universal_form_validation
-repository: https://github.com/afaq3522/universal_form_validation
-issue_tracker: https://github.com/afaq3522/universal_form_validation/issues
-documentation: https://github.com/afaq3522/universal_form_validation#readme
+version: 0.0.4
+homepage: https://github.com/afaq35202/universal_form_validation
+repository: https://github.com/afaq35202/universal_form_validation
+issue_tracker: https://github.com/afaq35202/universal_form_validation/issues
+documentation: https://github.com/afaq35202/universal_form_validation#readme
 license: MIT
 
 environment:
