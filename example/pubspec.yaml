@@ -1,0 +1,19 @@
+name: universal_form_validation_example
+description: Example app for the universal_form_validation package.
+publish_to: none
+version: 1.0.0
+
+environment:
+  sdk: ^3.4.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  universal_form_validation:
+    path: ../
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

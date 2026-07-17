@@ -1,35 +1,24 @@
 name: universal_form_validation
-description: A lightweight, extensible, country-aware form validation package for Flutter & Dart.
-version: 0.0.4
+description: >-
+  Lightweight, pure Dart, country-aware form validation. Email, password,
+  phone, URL, credit card, address and postal code validators for Flutter
+  and Dart apps.
+version: 1.0.0
 homepage: https://github.com/afaq35202/universal_form_validation
 repository: https://github.com/afaq35202/universal_form_validation
 issue_tracker: https://github.com/afaq35202/universal_form_validation/issues
 documentation: https://github.com/afaq35202/universal_form_validation#readme
-license: MIT
 
 environment:
-  sdk: ^3.10.7
-  flutter: ">=1.17.0"
-
-dependencies:
-  flutter:
-    sdk: flutter
+  sdk: ^3.4.0
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^6.0.0
+  lints: ^4.0.0
+  test: ^1.25.0
 
 topics:
   - form
+  - validation
   - validator
-  - flutter
-  - validate
-  - textformfield
-
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
-flutter:
-
+  - form-validation
+  - input

@@ -59,8 +59,58 @@ class BasicValidators {
       return 'Password must contain a number';
     }
 
-    if (requireSpecialChar && !value.contains(RegExp(r'[!@#\$&*~]'))) {
+    if (requireSpecialChar && !value.contains(RegExp(r'[^A-Za-z0-9]'))) {
       return 'Password must contain a special character';
+    }
+
+    return null;
+  }
+
+  /// Validates that the given [value] is a valid URL.
+  ///
+  /// By default only `http` and `https` URLs are accepted. Set
+  /// [requireScheme] to `false` to also accept URLs without a scheme,
+  /// such as `example.com`.
+  static String? url(String? value, {bool requireScheme = true}) {
+    if (value == null || value.trim().isEmpty) {
+      return 'URL is required';
+    }
+
+    var input = value.trim();
+
+    if (!requireScheme && !input.contains('://')) {
+      input = 'https://$input';
+    }
+
+    final uri = Uri.tryParse(input);
+
+    if (uri == null ||
+        !(uri.scheme == 'http' || uri.scheme == 'https') ||
+        uri.host.isEmpty ||
+        !uri.host.contains('.')) {
+      return 'Enter a valid URL';
+    }
+
+    return null;
+  }
+
+  /// Validates that the given [value] matches the provided [pattern].
+  ///
+  /// [errorMessage] is returned when the pattern does not match.
+  static String? pattern(
+    String? value,
+    Pattern pattern, {
+    String errorMessage = 'Invalid format',
+    String fieldName = 'Field',
+  }) {
+    if (value == null || value.trim().isEmpty) {
+      return '$fieldName is required';
+    }
+
+    final regex = pattern is RegExp ? pattern : RegExp(pattern.toString());
+
+    if (!regex.hasMatch(value.trim())) {
+      return errorMessage;
     }
 
     return null;
